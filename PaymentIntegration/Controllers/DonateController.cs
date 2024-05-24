@@ -38,8 +38,8 @@ namespace PaymentIntegration.Controllers
                 AmountInKobo = donate.Amount * 100,
                 Email = donate.Email,
                 Reference = Generate().ToString(),
-                Currency = "NGN",
-                CallbackUrl = "http://localhost:36222/donate/verify"
+                Currency = "ZAR",
+                CallbackUrl = "http://localhost:5000/donate/verify"
             };
 
             TransactionInitializeResponse response = Paystack.Transactions.Initialize(request);
